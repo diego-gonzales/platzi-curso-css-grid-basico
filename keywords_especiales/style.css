@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* min-content and max-content */
+/* .contenedor {
+  border: 5px solid #e1bee7;
+  background-color: #fffef1;
+  display: grid;
+  grid-template-columns: 1fr 1fr min-content max-content;
+}
+
+.item {
+  border: 5px solid #00bcd4;
+  font-size: 2rem;
+} */
+
+
+/* auto-fill and auto-fit. Cuando los usamos siempre debemos usar un minmax() */
+.contenedor {
+  border: 5px solid #e1bee7;
+  background-color: #fffef1;
+  display: grid;
+  /* Aquí si le ponemos un valor fijo en vez de 1fr no se va ajustar al ancho total que tenemos */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.contenedor-2 {
+  margin-top: 50px;
+  border: 5px solid #e1bee7;
+  background-color: #fffef1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.item {
+  border: 5px solid #00bcd4;
+  font-size: 2rem;
+}
